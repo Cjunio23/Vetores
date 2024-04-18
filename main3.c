@@ -1,9 +1,9 @@
 /* Implemente um programa que preenche aleatoriamente dois vetores Q e R com 12 e 20 elementos
-inteiros (valores repetidos ou n„o) respectivamente. Implemente um procedimento que recebe os vetores
-Q, R e um terceiro vetor W. O procedimento dever· preencher o vetor W com a interseÁ„o de Q e R. AlÈm
-disto, W n„o poder· conter elementos repetidos. Exiba o conte˙do do vetor W no programa principal.
-Utilize a funÁ„o malloc para os vetores Q e R. Utilize a funÁ„o realloc toda vez que um elemento for inserido
-no vetor W. N„o utilize vari·veis globais*/
+inteiros (valores repetidos ou n√£o) respectivamente. Implemente um procedimento que recebe os vetores
+Q, R e um terceiro vetor W. O procedimento dever√° preencher o vetor W com a interse√ß√£o de Q e R. Al√©m
+disto, W n√£o poder√° conter elementos repetidos. Exiba o conte√∫do do vetor W no programa principal.
+Utilize a fun√ß√£o malloc para os vetores Q e R. Utilize a fun√ß√£o realloc toda vez que um elemento for inserido
+no vetor W. N√£o utilize vari√°veis globais*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -13,13 +13,13 @@ bool verificar(int num,int tamanho,int *v3){
 	int i;
 	for(i=0;i<tamanho;i++){
 		if(v3[i]==num){
-         return false;//retorna false se o num que foi passado de parametro na funÁ„o j· pertence a intercessao
+         return false;//retorna false se o num que foi passado de parametro na fun√ß√£o j√° pertence a intercessao
 		}
 	}
-	return true;//retorna true se num passado de par„metro para a funÁ„o n„o pertence ainda a intercessao
+	return true;//retorna true se num passado de par√£metro para a fun√ß√£o n√£o pertence ainda a intercessao
 }
 
-int *inVetor(int *v1,int *v2,int * intersecao){//Funcao para pegar as interseÁao
+int *inVetor(int *v1,int *v2,int * intersecao){//Funcao para pegar as interse√ßao
 	int i,j;
 	int *v3;//intersecao
 	v3=(int*)malloc(sizeof(int));//alocando o v3(intersecao)
@@ -67,7 +67,7 @@ int main(){
 	}
 	printf("\n--------------------------------------------------------------------------------------\n");
 	printf("Intersecao de Q e R(W)\n");
-	int *W = inVetor(Q,R,intersecao);//Pegando as interseÁao do vetor q e r(Nao pode pegar de numeros repetidos)
+	int *W = inVetor(Q,R,intersecao);//Pegando as interse√ßao do vetor q e r(Nao pode pegar de numeros repetidos)
 	for(i=0;i<*intersecao;i++){//Percorreno o vetor
 		printf("%d ",W[i]);
 	}
